@@ -27,7 +27,7 @@ const [productData, setProductData] = useState(initialValue)
             'Content-Type': 'application/json',
             "Authorization": `Bearer ${JSON.parse(localStorage.getItem("token"))}` 
           };
-        axios.post("http://localhost:3000/addProducts", requestedData,{headers})
+        axios.post("https://todo-list-sjan.onrender.com/addProducts", requestedData,{headers})
 
           .then((response) => {
             setProductData(initialValue);

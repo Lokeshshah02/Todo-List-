@@ -36,7 +36,7 @@ const getProductData=()=>{
     'Content-Type': 'application/json', 
   "Authorization": `Bearer ${JSON.parse(localStorage.getItem("token"))}`
   };
-    axios.get(`http://localhost:3000/singleProduct/${params.id}`,{headers})
+    axios.get(`https://todo-list-sjan.onrender.com/singleProduct/${params.id}`,{headers})
     .then((res)=>{
         setProductData(res.data.availableProduct)
         console.log(res.data.availableProduct)
@@ -54,7 +54,7 @@ const handleUpdateProduct=(e)=>{
         'Content-Type': 'application/json', 
       "Authorization": `Bearer ${JSON.parse(localStorage.getItem("token"))}`
       };
-axios.put(`http://localhost:3000/updateProducts/${params.id}`,productData,{headers})
+axios.put(`https://todo-list-sjan.onrender.com/updateProducts/${params.id}`,productData,{headers})
 .then((res)=>{
     setProductData(res.data.availableProduct)
     console.log("product updated")
