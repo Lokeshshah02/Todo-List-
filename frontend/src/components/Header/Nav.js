@@ -20,7 +20,7 @@ const Nav = () => {
             <ul>
             <li> <Link to="/" > Products  </Link></li>
             <li> <Link  to="/add" > Add Products </Link></li>
-            <li> <Link to="/profile" > Profile  </Link></li>
+            {/* <li> <Link to="/profile" > Profile  </Link></li> */}
             <li> <Link to="/signup" onClick={handleLogout} > Logout &nbsp;[{JSON.parse(auth).name}] </Link></li>
             </ul>
             :
